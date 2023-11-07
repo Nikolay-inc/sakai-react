@@ -9,6 +9,7 @@ import { InputText } from 'primereact/inputtext';
 import { Checkbox } from 'primereact/checkbox';
 import { Calendar as PRCalendar } from 'primereact/calendar';
 import { EventService } from '../service/EventService';
+import { getUpdatedData } from '../utilities/UpdateEventsData';
 
 export const Calendar = () => {
 
@@ -26,7 +27,7 @@ export const Calendar = () => {
 
     useEffect(() => {
         const eventService = new EventService();
-        eventService.getEvents().then(data => setEvents(data));
+        eventService.getEvents().then(data => setEvents(getUpdatedData(data)));
     }, [])
 
     const save = () => {

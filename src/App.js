@@ -51,6 +51,8 @@ import 'prismjs/themes/prism-coy.css';
 import './layout/flags/flags.css';
 import './layout/layout.scss';
 import './App.scss';
+import './App.css';
+import { UpdatedCalendar } from './pages/UpdatedCalendar';
 
 const App = () => {
 
@@ -155,6 +157,7 @@ const App = () => {
             items: [
                 { label: 'Crud', icon: 'pi pi-fw pi-user-edit', to: '/crud' },
                 { label: 'Calendar', icon: 'pi pi-fw pi-calendar-plus', to: '/calendar' },
+                { label: 'Updated Calendar', icon: 'pi pi-fw pi-calendar-plus', to: '/updated-calendar' },
                 { label: 'Timeline', icon: 'pi pi-fw pi-calendar', to: '/timeline' },
                 { label: 'Empty Page', icon: 'pi pi-fw pi-circle-off', to: '/empty' }
             ]
@@ -284,6 +287,7 @@ const App = () => {
                 <Route path="/typography" component={TypographyDemo} />
                 <Route path="/text" component={TextDemo} />
                 <Route path="/calendar" component={Calendar} />
+                <Route path="/updated-calendar" component={UpdatedCalendar} />
                 <Route path="/timeline" component={TimelineDemo} />
                 <Route path="/crud" component={Crud} />
                 <Route path="/empty" component={EmptyPage} />
